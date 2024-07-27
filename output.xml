@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.0 on win32)" generated="2024-06-13T22:53:22.663750" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon" source="D:\Repo\RobotFramework\amazon.robot">
+<test id="s1-t1" name="Acessar Amazon e Pesquisar Produto" line="23">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:22.952749" level="INFO">Opening browser 'Firefox' to base url 'https://www.amazon.com.br'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-13T22:53:22.952749" elapsed="8.523309"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-13T22:53:31.480058" elapsed="0.263999"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:32.147058" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:53:31.747057" elapsed="0.400001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:twotabsearchtextbox</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:53:32.148057" elapsed="0.065001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:32.214057" level="INFO">Clicking element 'id:twotabsearchtextbox'.</msg>
+<arg>id:twotabsearchtextbox</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:32.214057" elapsed="0.456000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:32.671056" level="INFO">Typing text 'Samsung Galaxy S23' into text field 'id:twotabsearchtextbox'.</msg>
+<arg>id:twotabsearchtextbox</arg>
+<arg>Samsung Galaxy S23</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:32.671056" elapsed="0.110001"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:32.974057" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:53:32.782057" elapsed="0.192000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:32.979058" level="INFO">Clicking button 'id:nav-search-submit-button'.</msg>
+<arg>id:nav-search-submit-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:32.978058" elapsed="1.778001"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:35.096061" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:53:34.758060" elapsed="0.338001"/>
+</kw>
+<kw name="Set Price Range">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:35.100060" level="INFO">${current_url} = https://www.amazon.com.br/s?k=Samsung+Galaxy+S23&amp;__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1Z0Z2ZF5AV6BI&amp;sprefix=sa%2Caps%2C259&amp;ref=nb_sb_noss_2</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-06-13T22:53:35.098059" elapsed="0.002001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-13T22:53:35.101060" level="INFO">${new_url} = https://www.amazon.com.br/s?k=Samsung+Galaxy+S23&amp;__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1Z0Z2ZF5AV6BI&amp;sprefix=sa%2Caps%2C259&amp;ref=nb_sb_noss_2&amp;low-price=3000&amp;high-price=</msg>
+<var>${new_url}</var>
+<arg>${current_url}&amp;low-price=3000&amp;high-price=</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-13T22:53:35.101060" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:35.101060" level="INFO">Opening url 'https://www.amazon.com.br/s?k=Samsung+Galaxy+S23&amp;__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1Z0Z2ZF5AV6BI&amp;sprefix=sa%2Caps%2C259&amp;ref=nb_sb_noss_2&amp;low-price=3000&amp;high-price='</msg>
+<arg>${new_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-06-13T22:53:35.101060" elapsed="0.979999"/>
+</kw>
+<status status="PASS" start="2024-06-13T22:53:35.097059" elapsed="0.984000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:53:38.095059" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:53:36.082060" elapsed="2.012999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:a-autoid-1-announce</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:53:38.149059" elapsed="0.024000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:38.181059" level="INFO">Clicking button 'id:a-autoid-1-announce'.</msg>
+<arg>id:a-autoid-1-announce</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:38.180059" elapsed="0.342001"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:38.911448" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:53:38.544060" elapsed="0.367388"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(@class, "a-button-text") and contains(text(), "Ir para o carrinho")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:53:38.917447" elapsed="0.954000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:39.872447" level="INFO">Clicking element 'xpath=//a[contains(@class, "a-button-text") and contains(text(), "Ir para o carrinho")]'.</msg>
+<arg>xpath=//a[contains(@class, "a-button-text") and contains(text(), "Ir para o carrinho")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:39.871447" elapsed="1.025023"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:41.084382" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:53:40.899471" elapsed="0.184911"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:53:43.101304" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:53:41.085383" elapsed="2.015921"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input[value="Proceed to checkout"]</arg>
+<arg>timeout=6s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:53:43.102293" elapsed="0.009999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:43.113292" level="INFO">Clicking element 'css=input[value="Proceed to checkout"]'.</msg>
+<arg>css=input[value="Proceed to checkout"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:43.113292" elapsed="1.273002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=ap_email</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:53:44.387294" elapsed="0.081999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:44.471293" level="INFO">Typing text 'TestCoffee@dowload.bar' into text field 'id=ap_email'.</msg>
+<arg>id=ap_email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:44.470294" elapsed="0.066000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=continue</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:53:44.536294" elapsed="0.016999"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:44.621295" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:53:44.554294" elapsed="0.067001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:44.622295" level="INFO">Clicking element 'id=continue'.</msg>
+<arg>id=continue</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:44.621295" elapsed="0.773000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:53:47.410292" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:53:45.398295" elapsed="2.011997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=ap_password</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:53:47.410292" elapsed="0.010001"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:47.482293" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:53:47.420293" elapsed="0.062000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:47.513292" level="INFO">Typing text 'test123' into text field 'id=ap_password'.</msg>
+<arg>id=ap_password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:47.512292" elapsed="0.059005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:53:49.590291" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:53:47.577293" elapsed="2.012998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=signInSubmit</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:53:49.591292" elapsed="0.010001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:53:51.609304" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:53:49.601293" elapsed="2.008011"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:51.610293" level="INFO">Clicking element 'id=signInSubmit'.</msg>
+<arg>id=signInSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:51.610293" elapsed="3.052000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:53:56.672303" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:53:54.664294" elapsed="2.008009"/>
+</kw>
+<kw name="Handle Possible Add Address Link">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:56.743291" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:53:56.673292" elapsed="0.069999"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:56.754293" level="INFO">Element 'id=add-new-address-popover-link' is displayed.</msg>
+<arg>id=add-new-address-popover-link</arg>
+<arg>timeout=2s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:53:56.744293" elapsed="0.010000"/>
+</kw>
+<msg time="2024-06-13T22:53:56.754293" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>id=add-new-address-popover-link</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-13T22:53:56.743291" elapsed="0.011002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:53:56.755292" level="INFO">Clicking element 'id=add-new-address-popover-link'.</msg>
+<arg>id=add-new-address-popover-link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:53:56.755292" elapsed="0.290002"/>
+</kw>
+<arg>${is_visible}</arg>
+<arg>Click Element</arg>
+<arg>id=add-new-address-popover-link</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-13T22:53:56.754293" elapsed="0.292001"/>
+</kw>
+<status status="PASS" start="2024-06-13T22:53:56.672303" elapsed="0.373991"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:53:59.056291" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:53:57.047294" elapsed="2.008997"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:01.068304" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:53:59.057292" elapsed="2.011012"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:span.a-button-text.a-declarative[data-action="a-dropdown-button"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-13T22:54:01.068304" elapsed="0.002988"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:03.074306" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:01.072293" elapsed="2.002013"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:03.094292" level="INFO">Clicking element 'css:span.a-button-text.a-declarative[data-action="a-dropdown-button"]'.</msg>
+<arg>css:span.a-button-text.a-declarative[data-action="a-dropdown-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:03.075292" elapsed="0.291012"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:05.372303" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:03.367293" elapsed="2.005010"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:05.474292" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:54:05.373292" elapsed="0.101000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:05.475292" level="INFO">Clicking element 'id:address-ui-widgets-countryCode-dropdown-nativeId_31'.</msg>
+<arg>id:address-ui-widgets-countryCode-dropdown-nativeId_31</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:05.475292" elapsed="0.223011"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:07.703303" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:05.699291" elapsed="2.004012"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=address-ui-widgets-enterAddressFullName</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:54:07.703303" elapsed="0.009990"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:07.714292" level="INFO">Typing text 'Valentina Molina Sobrinho' into text field 'id=address-ui-widgets-enterAddressFullName'.</msg>
+<arg>id=address-ui-widgets-enterAddressFullName</arg>
+<arg>${NOMECOMPLETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:07.713293" elapsed="0.078001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:09.807291" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:07.792293" elapsed="2.014998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=address-ui-widgets-enterAddressPhoneNumber</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:54:09.807291" elapsed="0.010002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:09.818292" level="INFO">Typing text '6130472444' into text field 'id=address-ui-widgets-enterAddressPhoneNumber'.</msg>
+<arg>id=address-ui-widgets-enterAddressPhoneNumber</arg>
+<arg>${TELEFONE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:09.817293" elapsed="0.046001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:11.877314" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:09.864296" elapsed="2.013018"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=address-ui-widgets-enterAddressPostalCode</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:54:11.878293" elapsed="0.008999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:11.888293" level="INFO">Typing text '71920700' into text field 'id=address-ui-widgets-enterAddressPostalCode'.</msg>
+<arg>id=address-ui-widgets-enterAddressPostalCode</arg>
+<arg>${CEP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:11.888293" elapsed="0.047001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:13.936303" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:11.936293" elapsed="2.000010"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=address-ui-widgets-streetName</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:54:13.937293" elapsed="0.009001"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:13.947292" level="INFO">Typing text 'Residencial Atlântida I, R. das Aroeiras, Q. 107' into text field 'id=address-ui-widgets-streetName'.</msg>
+<arg>id=address-ui-widgets-streetName</arg>
+<arg>${ENDERECO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:13.946294" elapsed="0.099000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:16.057291" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:14.046294" elapsed="2.010997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=address-ui-widgets-buildingNumber</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:54:16.057291" elapsed="0.009002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:16.067293" level="INFO">Typing text '2' into text field 'id=address-ui-widgets-buildingNumber'.</msg>
+<arg>id=address-ui-widgets-buildingNumber</arg>
+<arg>${NUMEROCASA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:16.067293" elapsed="0.022001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:18.107291" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:16.096293" elapsed="2.010998"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:18.191291" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:54:18.108292" elapsed="0.082999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:18.192292" level="INFO">Clicking element 'xpath://span[@id='address-ui-widgets-form-submit-button']//input[@type='submit']'.</msg>
+<arg>xpath://span[@id='address-ui-widgets-form-submit-button']//input[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:18.192292" elapsed="0.267001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:20.467303" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:18.459293" elapsed="2.008010"/>
+</kw>
+<kw name="Handle Possible Tax ID Field">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:20.536291" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:54:20.468292" elapsed="0.067999"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:20.585293" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-13T22:54:20.585293" level="FAIL">Element with locator 'id=taxid-field' not found.</msg>
+<arg>id=taxid-field</arg>
+<arg>timeout=4s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-06-13T22:54:20.537292" elapsed="0.050000">Element with locator 'id=taxid-field' not found.</status>
+</kw>
+<msg time="2024-06-13T22:54:20.587292" level="INFO">${taxid_visible} = False</msg>
+<var>${taxid_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>id=taxid-field</arg>
+<arg>timeout=4s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-13T22:54:20.537292" elapsed="0.050000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${taxid_visible}</arg>
+<arg>Input Text</arg>
+<arg>id=taxid-field</arg>
+<arg>${CPF}</arg>
+<arg>Sleep</arg>
+<arg>2</arg>
+<arg>Click Element</arg>
+<arg>xpath=//input[@aria-labelledby='taxid-continue-enabled-announce' and @type='submit']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-13T22:54:20.587292" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-13T22:54:20.467303" elapsed="0.120989"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:30.590291" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:20.588292" elapsed="10.001999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://div[contains(@class, 'a-fixed-left-grid-col') and contains(@class, 'pmts-pix-text-content')]/span[text()='O código Pix gerado para o pagamento é válido por 30 minutos após a finalização do pedido.']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:54:30.591293" elapsed="0.013000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:30.604293" level="INFO">Clicking element 'xpath://div[contains(@class, 'a-fixed-left-grid-col') and contains(@class, 'pmts-pix-text-content')]/span[text()='O código Pix gerado para o pagamento é válido por 30 minutos após a finalização do pedido.']'.</msg>
+<arg>xpath://div[contains(@class, 'a-fixed-left-grid-col') and contains(@class, 'pmts-pix-text-content')]/span[text()='O código Pix gerado para o pagamento é válido por 30 minutos após a finalização do pedido.']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:30.604293" elapsed="0.254000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:30.932293" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:54:30.858293" elapsed="0.074000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:32.947304" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:30.933292" elapsed="2.014012"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://span[text()='Usar esta forma de pagamento']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T22:54:32.947304" elapsed="0.010989"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:32.959292" level="INFO">Clicking element 'xpath://input[@class='a-button-input a-button-text' and @name='ppw-widgetEvent:SetPaymentPlanSelectContinueEvent']'.</msg>
+<arg>xpath://input[@class='a-button-input a-button-text' and @name='ppw-widgetEvent:SetPaymentPlanSelectContinueEvent']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:32.959292" elapsed="0.242001"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:33.283293" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:54:33.201293" elapsed="0.082000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:37.296303" level="INFO">Slept 4 seconds.</msg>
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:33.284293" elapsed="4.012010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:37.297293" level="INFO">Clicking element 'id=submitOrderButtonId'.</msg>
+<arg>id=submitOrderButtonId</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:37.296303" elapsed="2.135991"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:41.439293" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:39.433294" elapsed="2.005999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:41.440293" level="INFO">Clicking element 'xpath://span[@class='break-word' and text()='Revise ou edite seus pedidos recentes']'.</msg>
+<arg>xpath://span[@class='break-word' and text()='Revise ou edite seus pedidos recentes']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:41.440293" elapsed="2.263001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:45.713303" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:43.703294" elapsed="2.010009"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:45.819291" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:54:45.713303" elapsed="0.106991"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:47.825304" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:45.820294" elapsed="2.005010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:47.826293" level="INFO">Clicking element 'xpath://a[@class='a-link-normal' and text()='Exibir recibo']'.</msg>
+<arg>xpath://a[@class='a-link-normal' and text()='Exibir recibo']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:47.825304" elapsed="1.288990"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:49.231304" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:54:49.115294" elapsed="0.116998"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:51.239303" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:49.232292" elapsed="2.007011"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:51.240293" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-06-13T22:54:51.239303" elapsed="1.104992"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:54.355303" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:52.345293" elapsed="2.010010"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=nav-hamburger-menu</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-13T22:54:54.355303" elapsed="0.004990"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:54.360293" level="INFO">Clicking element 'id=nav-hamburger-menu'.</msg>
+<arg>id=nav-hamburger-menu</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:54.360293" elapsed="0.244010"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:54.844293" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:54:54.605292" elapsed="0.239001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:56.850292" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:54.845293" elapsed="2.004999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:56.851292" level="INFO">Clicking element 'xpath://a[contains(@class, 'hmenu-item hmenu-compressed-btn') and contains(div, 'Ver tudo')]'.</msg>
+<arg>xpath://a[contains(@class, 'hmenu-item hmenu-compressed-btn') and contains(div, 'Ver tudo')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:56.850292" elapsed="0.237012"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:54:59.088303" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:57.088293" elapsed="2.000010"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.hmenu-item[data-menu-id="16"]</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-13T22:54:59.088303" elapsed="0.005990"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:54:59.095293" level="INFO">Clicking element 'css=.hmenu-item[data-menu-id="16"]'.</msg>
+<arg>css=.hmenu-item[data-menu-id="16"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T22:54:59.094293" elapsed="0.246000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:55:01.351303" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:54:59.341294" elapsed="2.010009"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:55:01.553294" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:55:01.351303" elapsed="0.201991"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:55:03.567291" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:55:01.554293" elapsed="2.012998"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.hmenu-item[href*="node=16243890011"]:nth-child(1)</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-13T22:55:03.568293" elapsed="0.005000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:55:03.574294" level="INFO">Executing JavaScript:
+document.querySelectorAll('.hmenu-item[href*="node=16243890011"]')[0].click();
+Without any arguments.</msg>
+<arg>document.querySelectorAll('.hmenu-item[href*="node=16243890011"]')[0].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-06-13T22:55:03.573293" elapsed="0.031000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T22:55:05.611293" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T22:55:03.605294" elapsed="2.005999"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-13T22:55:05.943294" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-13T22:55:05.612294" elapsed="0.331999"/>
+</kw>
+<doc>Abrir o site da Amazon e pesquisar por um produto</doc>
+<status status="PASS" start="2024-06-13T22:53:22.951749" elapsed="102.993545"/>
+</test>
+<status status="PASS" start="2024-06-13T22:53:22.665749" elapsed="103.280544"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
